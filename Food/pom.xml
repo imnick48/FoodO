@@ -67,6 +67,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version> <!-- or 3.1.0 if you're using older servlet spec -->
+		    <scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>

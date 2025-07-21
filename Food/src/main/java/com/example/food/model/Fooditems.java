@@ -10,18 +10,23 @@ import jakarta.persistence.GenerationType;
 @Entity
 @Table(name="Fooditems")
 public class Fooditems {
-	
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Integer ID;
+    @Column(nullable = false, unique = true)
+    private Integer ID;
     @Column(nullable = false)
     private String resturantName;
 
     @Column(nullable = false)
     private String foodItems;
-
+    
+	public Integer getId() {
+		return ID;
+	}
+	public void setId(Integer id) {
+		this.ID = id;
+	}	
 	public String getResturantName() {
 		return resturantName;
 	}
